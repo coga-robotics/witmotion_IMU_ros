@@ -67,3 +67,16 @@ target_link_libraries(witmotion_ros ${catkin_LIBRARIES} witmotion-uart Qt5::Core
 add_executable(witmotion_ros_node src/witmotion_ros_node.cpp)
 target_link_libraries(witmotion_ros_node PRIVATE ${catkin_LIBRARIES} witmotion_ros)
 
+install(TARGETS ${PROJECT_NAME}_node witmotion_ros
+        ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+        LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+       	RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+install(DIRECTORY launch config 
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
+
+install(DIRECTORY include
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+  )
