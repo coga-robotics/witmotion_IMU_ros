@@ -1,4 +1,4 @@
 [submodule "witmotion-uart-qt"]
 	path = witmotion-uart-qt
-	url = https://github.com/coga-robotics/witmotion_IMU_QT.git
+	url = https://github.com/coga-robotics/witmotion-uart-qt.git
 	branch = develop
